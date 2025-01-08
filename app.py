@@ -16,27 +16,44 @@ st.title("Location Intelligence Tool V1")
 st.write("Explore demographics, traffic, and competitor data layers on this interactive map.")
 
 # Placeholder: Replace these with actual data sources
-# Example competitor data
-competitor_data = pd.DataFrame({
-    "latitude": [51.0447, 53.5461, 52.2681, 50.4452],
-    "longitude": [-114.0719, -113.4938, -113.8112, -104.6189],
-    "name": ["Competitor A", "Competitor B", "Competitor C", "Competitor D"],
-    "type": ["Grocery", "Gas", "Liquor", "Grocery"],
-})
+latitude,longitude,name,type
+51.0447,-114.0719,Real Canadian Superstore,Grocery
+53.5461,-113.4938,Shell Edmonton,Gas
+52.2681,-113.8112,Liquor Depot,Liquor
+50.4452,-104.6189,Sobeys Regina,Grocery
+53.6305,-113.3239,Petro-Canada Calgary,Gas
+53.9333,-116.5765,Costco Jasper,Grocery
+49.2827,-123.1207,Save-On-Foods Vancouver,Grocery
+55.1667,-118.7866,Walmart Grande Prairie,Grocery
+51.0486,-114.0716,No Frills Calgary,Grocery
+51.1622,-114.0773,7-Eleven Edmonton,Convenience
 
 # Example demographics data
-demographics_data = pd.DataFrame({
-    "latitude": [51.05, 53.55, 52.27, 50.45],
-    "longitude": [-114.07, -113.49, -113.81, -104.62],
-    "population_density": [3000, 2500, 4000, 2000],  # Example population density
-})
+latitude,longitude,population_density_2016,population_density_2021,median_income,growth_rate
+51.05,-114.07,4000,4200,85000,5.0
+53.55,-113.49,3500,3700,80000,5.7
+52.27,-113.81,5000,5200,95000,4.0
+50.45,-104.62,2500,2600,75000,3.5
+53.63,-113.32,2000,2100,70000,5.0
+53.93,-116.58,4500,4600,88000,2.0
+49.28,-123.12,5400,5800,90000,7.4
+55.17,-118.78,1800,1900,70000,6.1
+51.04,-114.07,4600,4700,85000,4.8
+52.32,-113.52,3900,4000,83000,4.3
 
 # Example traffic data
-traffic_data = pd.DataFrame({
-    "latitude": [51.04, 53.54, 52.26],
-    "longitude": [-114.06, -113.48, -113.80],
-    "traffic_volume": [20000, 15000, 18000],  # Example traffic volume
-})
+latitude,longitude,traffic_volume,road_name
+51.04,-114.06,25000,Deerfoot Trail
+53.54,-113.48,20000,Anthony Henday Drive
+52.26,-113.80,23000,Highway 2A
+50.44,-104.61,17000,Ring Road
+53.63,-113.32,30000,Crowchild Trail
+53.93,-116.57,22000,Yellowhead Highway
+49.28,-123.11,40000,Granville St
+55.17,-118.78,15000,Highway 43
+51.05,-114.07,26000,Stoney Trail
+52.15,-113.65,18000,Whitemud Drive
+
 
 # Competitor layer
 competitor_layer = pdk.Layer(
